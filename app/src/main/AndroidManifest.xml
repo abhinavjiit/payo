@@ -18,6 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ExpensesAndIncomeActivity" />
+        <activity android:name=".AllTransactionalDataActivity" />
+
         <receiver android:name=".SmsListener">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />

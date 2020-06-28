@@ -6,7 +6,6 @@ import android.content.Intent
 import android.os.Build
 import android.telephony.SmsMessage
 import android.util.Log
-import java.lang.Exception
 import java.util.regex.Pattern
 
 class SmsListener : BroadcastReceiver() {
@@ -48,14 +47,20 @@ class SmsListener : BroadcastReceiver() {
                                     "SmsReceiver Mine",
                                     "senderNum: $phoneNumber; message: $message"
                                 )
-
                                 if (message.contains("debited", true)) {
                                     Log.d("DEBITED___YES", "YESSSSSSSSS")
+//// ////////////(date,phonenumber,ammount)
+
+
+
+
                                 } else if (message.contains("credited", true)) {
                                     Log.d("CREDITED___YES", "YESSSSSSSSS")
 
+/////...////////(date,phonenumber,ammount)
+
                                 } else {
-                                    Log.d("CREDITED___YES", "NOOOOOOO")
+                                    Log.d("TAGGGG", "NOOOOOOO")
 
                                 }
                             } catch (e: Exception) {
