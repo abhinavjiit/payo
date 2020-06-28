@@ -7,3 +7,4 @@ First activity is transactional chart .where I just show a piechart but I have t
 4.
 In next activity after clicking on bottom button there are two buttons in next screen where you can see two button monthly or daily .those will show the data of accordingly after clicking by default it is monthly.
 And to see all the transactions of the respective chart just click on chart it will show next screen where u can see the transactions of that month and day .that is also a hardcoded data.
+5.to change the tag just click on the layout it will be changed automatically right now ,but we can use a dialog for the same and get the name in the list using callbacks.this is just for a demo purpose.
