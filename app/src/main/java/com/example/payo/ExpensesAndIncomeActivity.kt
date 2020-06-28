@@ -26,6 +26,7 @@ class ExpensesAndIncomeActivity : AppCompatActivity() {
             val dataModel = DataModel()
             dataModel.expense = expenses
             dataModel.income = 100 - expenses
+            dataModel.tag="month$i"
             arrayList.add(dataModel)
         }
         expensesAndIncomeAdapter = ExpensesAndIncomeAdapter(this)
@@ -40,6 +41,7 @@ class ExpensesAndIncomeActivity : AppCompatActivity() {
                 val dataModel = DataModel()
                 dataModel.expense = expenses
                 dataModel.income = 100 - expenses
+                dataModel.tag="month$i"
                 arrayList.add(dataModel)
             }
             expensesAndIncomeAdapter.setListData(arrayList)
@@ -52,6 +54,7 @@ class ExpensesAndIncomeActivity : AppCompatActivity() {
                 val dataModel = DataModel()
                 dataModel.expense = expenses
                 dataModel.income = 100 - expenses
+                dataModel.tag="day$i"
                 arrayList.add(dataModel)
             }
             expensesAndIncomeAdapter.setListData(arrayList)

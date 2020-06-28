@@ -7,7 +7,6 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
@@ -15,8 +14,6 @@ import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.utils.ColorTemplate
 import kotlinx.android.synthetic.main.expenses_income_activity_layout.view.*
-import kotlinx.android.synthetic.main.expenses_income_adapter.view.*
-import okhttp3.internal.addHeaderLenient
 
 class ExpensesAndIncomeAdapter(val context: Context) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -58,13 +55,15 @@ class ExpensesAndIncomeAdapter(val context: Context) :
             holder.view.setOnClickListener {
                 context.startActivity(Intent(context, AllTransactionalDataActivity::class.java))
             }
+            holder.monthOrdaily.text = listData?.get(position)?.tag
 
         }
     }
 
     class ViewHolder(mView: View) : RecyclerView.ViewHolder(mView) {
         val pieChart: PieChart = mView.pieChart
-        val view:View=mView.view
+        val view: View = mView.view
+        val monthOrdaily = mView.monthOrdaily
 
     }
 }
